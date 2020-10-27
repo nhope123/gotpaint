@@ -37,7 +37,7 @@ export class Form extends React.Component{
             <input name={'searchinput'} type='text' id={'searchcode'} tabIndex='0' placeholder='Batch code'/>
           </div>
           <div className='submit'>
-            <button type='submit' form={'search'} >{'Search'}</button>
+            <button type='submit' form={'search'} >{'Enter'}</button>
           </div>
         </form>
       </div>

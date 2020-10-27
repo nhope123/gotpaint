@@ -1,5 +1,11 @@
 @import './variables/_mixins.scss';
 
+.active{
+  background-color: $contentBackgroundColor;
+  border: 2px solid red;
+  border-radius: 10px;
+  color: black;
+}
 
 nav{
   @include positionLayout(block, fixed);
@@ -9,7 +15,10 @@ nav{
   margin: 0px;
   z-index: 9;
   top:0;
-  div{padding-left: 25px;}
+  div{
+    padding-left: 25px;
+    //border-bottom : 1px solid grey ;
+   }
 
   img{
     @include dimension(42px, 42px);
@@ -24,7 +33,7 @@ nav{
     padding-left: 15px;
   }
   ul{
-    margin: 0px 15%;
+    margin: 10px 15%;
     padding: 0px;
     @include positionLayout(flex,relative);
     @include flexPosition(row,space-between,center);
@@ -35,12 +44,23 @@ nav{
       @include dimension(30%);
       line-height: 1.9;
       text-align: center;
+      color: white;
+      font-weight: bold;
+
     }
   }
 }
 
 @media screen and (min-width: 451px) {
-
+  .active{
+    background-color: $contentBackgroundColor;
+    border: 0px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: 4px solid white;
+  }
 
   nav{
     @include dimension(100vw, 80px);
@@ -55,10 +75,4 @@ nav{
       }
     }
   }
-}
-
-
-.active{
-  background-color: $contentBackgroundColor;
-  border-left: 2px solid white;
 }

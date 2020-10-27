@@ -6,7 +6,7 @@ import './style/index.scss';
 import './style/nav.scss';
 import './style/form.scss';
 //import App from './App';
-import {Paint} from './components/paintApp.js';
+import Paint from './components/paintApp.js';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
