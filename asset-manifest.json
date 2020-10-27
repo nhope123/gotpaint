@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/gotpaint/static/css/main.f76f011a.chunk.css",
+    "main.js": "/gotpaint/static/js/main.a86e66ed.chunk.js",
+    "main.js.map": "/gotpaint/static/js/main.a86e66ed.chunk.js.map",
+    "runtime-main.js": "/gotpaint/static/js/runtime-main.1802a214.js",
+    "runtime-main.js.map": "/gotpaint/static/js/runtime-main.1802a214.js.map",
+    "static/js/2.bef99131.chunk.js": "/gotpaint/static/js/2.bef99131.chunk.js",
+    "static/js/2.bef99131.chunk.js.map": "/gotpaint/static/js/2.bef99131.chunk.js.map",
+    "static/js/3.82f383b3.chunk.js": "/gotpaint/static/js/3.82f383b3.chunk.js",
+    "static/js/3.82f383b3.chunk.js.map": "/gotpaint/static/js/3.82f383b3.chunk.js.map",
+    "index.html": "/gotpaint/index.html",
+    "static/css/main.f76f011a.chunk.css.map": "/gotpaint/static/css/main.f76f011a.chunk.css.map",
+    "static/js/2.bef99131.chunk.js.LICENSE.txt": "/gotpaint/static/js/2.bef99131.chunk.js.LICENSE.txt",
+    "static/media/logo.f84c56a6.png": "/gotpaint/static/media/logo.f84c56a6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1802a214.js",
+    "static/js/2.bef99131.chunk.js",
+    "static/css/main.f76f011a.chunk.css",
+    "static/js/main.a86e66ed.chunk.js"
+  ]
+}
