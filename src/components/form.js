@@ -2,11 +2,13 @@ import React from 'react';
 
 export class Form extends React.Component{
   render(){
+
+    var classes = 'box ' + this.props.cName;
     return(
-      <div >
-        <div>{'Search'}</div>
+      <div className={classes} >
+        <div className='title'>{this.props.title}</div>
         <form id={'search'} action='' method=''>
-          <div id='choice'>
+          <div className='choice'>
             <label htmlFor={'searchChoice'} > {'Auto Maker'}</label>
             <select name={'searchChoice'} id={'searchdrop'}>
               <option value='acura'>Acura</option>
@@ -30,12 +32,13 @@ export class Form extends React.Component{
               <option value='volvo'>Volvo </option>
             </select>
           </div>
-          <div id='code'>
+          <div className='code'>
             <label htmlFor={'searchinput'} > {'Batch code'}</label>
             <input name={'searchinput'} type='text' id={'searchcode'} tabIndex='0' placeholder='Batch code'/>
           </div>
-          <button type='submit' form={'search'} >{'Search'}</button>
-
+          <div className='submit'>
+            <button type='submit' form={'search'} >{'Search'}</button>
+          </div>
         </form>
       </div>
     );

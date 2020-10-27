@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import {store} from './store/store.js';
 import './style/index.scss';
 import './style/nav.scss';
+import './style/form.scss';
 //import App from './App';
 import {Paint} from './components/paintApp.js';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Paint />
+    <Provider store={store}>
+      <Paint />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

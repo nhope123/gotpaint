@@ -1,4 +1,6 @@
 
+ $contentBackgroundColor: 'white';
+
 @mixin positionLayout($display,$position) {
   display: $display;
   position: $position;
@@ -30,4 +32,8 @@
   -webkit-background-clip: $value;
   -moz-background-clip: $value;
   background-clip: $value;
+}
+@mixin boxShadow($x,$y,$blur,$color,$spread:0px) {
+  -webkit-box-shadow: $x $y $blur $spread $color;
+  box-shadow: $x $y $blur $spread $color;
 }

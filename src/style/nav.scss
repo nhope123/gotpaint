@@ -1,17 +1,21 @@
 @import './variables/_mixins.scss';
 
+
 nav{
   @include positionLayout(block, fixed);
   @include dimension(100vw);
   background-color: red;
   padding: 0px;
   margin: 0px;
+  z-index: 9;
+  top:0;
+  div{padding-left: 25px;}
 
   img{
     @include dimension(42px, 42px);
     border: 0px solid black;
     border-bottom-left-radius: 20px;
-    padding-left: 25px;
+
   }
   span{
     @include positionLayout(inline-block, relative);
@@ -36,15 +40,25 @@ nav{
 }
 
 @media screen and (min-width: 451px) {
+
+
   nav{
     @include dimension(100vw, 80px);
+
     ul{
       margin: 0px auto;
       max-width: 650px;
       min-width: 370px;
       li{
         @include dimension(15%);
+
       }
     }
   }
+}
+
+
+.active{
+  background-color: $contentBackgroundColor;
+  border-left: 2px solid white;
 }
