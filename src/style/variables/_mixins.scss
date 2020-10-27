@@ -1,0 +1,33 @@
+
+@mixin positionLayout($display,$position) {
+  display: $display;
+  position: $position;
+}
+@mixin flexPosition($direction,$justify,$align) {
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin dimension($width,$height:auto) {
+  width: $width;
+  height: $height;
+}
+@mixin fontStyle($size,$color,$weight:normal) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}
+
+@mixin transform($tranformation) {
+  -moz-transform: $tranformation;
+  -webkit-transform: $tranformation;
+  -o-transform: $tranformation;
+  -ms-transform: $tranformation;
+  transform: $tranformation;
+}
+
+@mixin backgroundClip($value){
+  -webkit-background-clip: $value;
+  -moz-background-clip: $value;
+  background-clip: $value;
+}

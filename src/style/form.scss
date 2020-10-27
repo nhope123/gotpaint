@@ -1,0 +1,18 @@
+@import './variables/_mixins.scss';
+
+.hide{
+  @include positionLayout(none,relative);
+}
+.show{
+  @include positionLayout(none,relative);
+}
+
+
+
+@media screen and (min-width: 451px) {
+  #content{
+    @include positionLayout(flex,relative);
+    margin-top: 80px;
+  }
+
+}
