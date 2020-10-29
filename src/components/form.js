@@ -2,42 +2,42 @@ import React from 'react';
 
 export class Form extends React.Component{
   render(){
-
     var classes = 'box ' + this.props.cName;
     return(
       <div className={classes} >
         <div className='title'>{this.props.title}</div>
-        <form id={'search'} action='' method=''>
+        <form id={this.props.formId} action='' method=''>
           <div className='choice'>
-            <label htmlFor={'searchChoice'} > {'Auto Maker'}</label>
-            <select name={'searchChoice'} id={'searchdrop'}>
-              <option value='acura'>Acura</option>
-              <option value='bmw'>BMW</option>
-              <option value='chrysler'>Chrysler</option>
-              <option value='ford'>Ford</option>
-              <option value='gmc'>GMC</option>
-              <option value='honda'>Honda</option>
-              <option value='hyundai'>Hyundai</option>
-              <option value='infiniti'>Infiniti</option>
-              <option value='kia'>Kia </option>
-              <option value='mazada'>Mazda </option>
-              <option value='mercedes'>Mercedes</option>
-              <option value='mini'>MINI</option>
-              <option value='mitsubishi'>Mitsubishi</option>
-              <option value='nissan'>Nissan</option>
-              <option value='porsche'>Porsche</option>
-              <option value='subaru'>Subaru</option>
-              <option value='toyota'>Toyota </option>
-              <option value='vw'>Volkswagen </option>
-              <option value='volvo'>Volvo </option>
+            <label htmlFor={this.props.dropdownName} > {'Auto Maker'}</label>
+            <select name={this.props.dropdownName} id={this.props.makeId}>
+              <option value='Acura'>Acura</option>
+              <option value='BMW'>BMW</option>
+              <option value='Chrysler'>Chrysler</option>
+              <option value='Fiat'>Fiat</option>
+              <option value='Ford'>Ford</option>
+              <option value='GMC'>GMC</option>
+              <option value='Honda'>Honda</option>
+              <option value='Hyundai'>Hyundai</option>
+              <option value='Infiniti'>Infiniti</option>
+              <option value='Kia'>Kia </option>
+              <option value='Mazada'>Mazda </option>
+              <option value='Mercedes'>Mercedes</option>
+              <option value='Mini'>MINI</option>
+              <option value='Mitsubishi'>Mitsubishi</option>
+              <option value='Nissan'>Nissan</option>
+              <option value='Porsche'>Porsche</option>
+              <option value='Subaru'>Subaru</option>
+              <option value='Toyota'>Toyota </option>
+              <option value='Volkswagen'>Volkswagen </option>
+              <option value='Volvo'>Volvo </option>
             </select>
           </div>
           <div className='code'>
-            <label htmlFor={'searchinput'} > {'Batch code'}</label>
-            <input name={'searchinput'} type='text' id={'searchcode'} tabIndex='0' placeholder='Batch code'/>
+            <label htmlFor={this.props.inputName} > {'Paint code'}</label>
+            <input name={this.props.inputName} type='text' id={this.props.codeId} tabIndex='0' placeholder='Paint code' required/>
           </div>
           <div className='submit'>
-            <button type='submit' form={'search'} >{'Enter'}</button>
+            <button type='submit' form={this.props.formId} onClick={this.props.callback}>{'Enter'}</button>
           </div>
         </form>
       </div>

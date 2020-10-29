@@ -1,14 +1,25 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as sub from './../actions/submitAction.js';
 import Navigation from './nav';
 import {Form} from './form.js';
-import {connect} from 'react-redux';
 
 class Paint extends React.Component{
   render(){
-    var search = {title:'Search Color',cName: this.props.role[0]};
-    const add = {title:'Add Color',cName: this.props.role[1]};
-    const remove = {title:'Remove Color',cName: this.props.role[2]};
-    console.log('var '+ search.title);
+    var search = {title:'Search Color', makeId: 'searchMake', codeId: 'searchCode',
+                  cName: this.props.role[0], callback: this.props.searchSubmit,
+                  formId: 'searchForm', dropdownName: 'searchDown',inputName: 'searchInput'
+                };
+    const add = {title:'Add Color', makeId: 'addMake', codeId: 'addCode',
+                 cName: this.props.role[1],callback: this.props.addSubmit,
+                 formId: 'addForm', dropdownName: 'addDown',inputName: 'addInput'
+               };
+    const remove = {title:'Remove Color', makeId: 'removeMake', codeId: 'removeCode',
+                    cName: this.props.role[2], callback: this.props.removeSubmit,
+                    formId: 'removeForm', dropdownName: 'removeDown', inputName: 'removeInput'
+                  };
+    console.log(add.callback);
     return(
       <div id='paint-container'>
         <Navigation />
@@ -25,8 +36,15 @@ class Paint extends React.Component{
 
 const mapStateToProps = (state)=>{
   return{
-    role: state.role
+    role: state.select.role
   }
 }
+const mapDispatchToProps = (dispatch)=>{
+  return bindActionCreators({
+    addSubmit: sub.addSubmitAction,
+    searchSubmit: sub.searchSubmitAction,
+    removeSubmit: sub.removeSubmitAction
+  },dispatch);
+}
 
-export default connect(mapStateToProps,null)(Paint);
+export default connect(mapStateToProps,mapDispatchToProps)(Paint);

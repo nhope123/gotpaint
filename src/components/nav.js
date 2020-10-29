@@ -2,7 +2,7 @@
 import logo from './../img/logo.png';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as navA from './../actions/action.js';
+import * as navA from './../actions/selectAction.js';
 
 const Navigation = (props)=>{
   return(
@@ -15,7 +15,7 @@ const Navigation = (props)=>{
         <li className={props.select[0]} onClick={props.search}>Search</li>
         <li className={props.select[1]} onClick={props.add}>Add</li>
         <li className={props.select[2]} onClick={props.remove}>Remove</li>
-        <li className={props.select[3]} onClick={props.logAction}>Log</li>
+        <li className={props.select[3]} onClick={props.logAction}>Inventory</li>
         <li className={props.select[4]} onClick={props.save}>Save</li>
         <li className={props.select[5]} onClick={props.backup}>Backup</li>
       </ul>
@@ -25,7 +25,7 @@ const Navigation = (props)=>{
 
 const mapStateToProps = (state)=>{
   return{
-    select: state.select
+    select: state.select.select
   }
 }
 const mapDispatchToProps = (dispatch)=>{
