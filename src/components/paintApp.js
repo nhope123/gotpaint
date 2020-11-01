@@ -4,29 +4,32 @@ import {bindActionCreators} from 'redux';
 import * as sub from './../actions/submitAction.js';
 import Navigation from './nav';
 import {Form} from './form.js';
+import Inventory from './inventory.js';
+
+
+const search = {
+              title:'Search Color', makeId: 'searchMake', codeId: 'searchCode',
+              formId: 'searchForm', dropdownName: 'searchDown',inputName: 'searchInput'
+            };
+const add = {
+             title:'Add Color', makeId: 'addMake', codeId: 'addCode',
+             formId: 'addForm', dropdownName: 'addDown',inputName: 'addInput'
+           };
+const remove = {
+                title:'Remove Color', makeId: 'removeMake', codeId: 'removeCode',
+                formId: 'removeForm', dropdownName: 'removeDown', inputName: 'removeInput'
+              };
 
 class Paint extends React.Component{
   render(){
-    var search = {title:'Search Color', makeId: 'searchMake', codeId: 'searchCode',
-                  cName: this.props.role[0], callback: this.props.searchSubmit,
-                  formId: 'searchForm', dropdownName: 'searchDown',inputName: 'searchInput'
-                };
-    const add = {title:'Add Color', makeId: 'addMake', codeId: 'addCode',
-                 cName: this.props.role[1],callback: this.props.addSubmit,
-                 formId: 'addForm', dropdownName: 'addDown',inputName: 'addInput'
-               };
-    const remove = {title:'Remove Color', makeId: 'removeMake', codeId: 'removeCode',
-                    cName: this.props.role[2], callback: this.props.removeSubmit,
-                    formId: 'removeForm', dropdownName: 'removeDown', inputName: 'removeInput'
-                  };
-    console.log(add.callback);
     return(
       <div id='paint-container'>
         <Navigation />
         <div id='content'>
-          <Form {...search}/>
-          <Form {...add}/>
-          <Form {...remove}/>
+          <Form {...search}{...{cName:this.props.role[0], callback:this.props.searchSubmit}}/>
+          <Form {...add}{...{cName: this.props.role[1],callback: this.props.addSubmit}}/>
+          <Form {...remove}{...{cName: this.props.role[2], callback: this.props.removeSubmit}}/>
+          <Inventory cName={this.props.role[3]}/>
         </div>
       </div>
 

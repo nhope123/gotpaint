@@ -83,7 +83,7 @@ const getAutoMakeRecord = (makeId,codeId)=>{
   var autoMake = document.getElementById(makeId).value;
   var autoCode = document.getElementById(codeId).value;
   document.getElementById(codeId).value = '';
- return [ autoMake, autoCode];
+ return [ autoMake, autoCode.toUpperCase()];
 }
 
 // Acquire element input values
