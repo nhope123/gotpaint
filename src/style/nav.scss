@@ -17,7 +17,6 @@ nav{
   top:0;
   div{
     padding-left: 25px;
-    //border-bottom : 1px solid grey ;
    }
 
   img{
@@ -33,7 +32,7 @@ nav{
     padding-left: 15px;
   }
   ul{
-    margin: 10px 15%;
+    margin: 0px 15% 10px;
     padding: 0px;
     @include positionLayout(flex,relative);
     @include flexPosition(row,space-between,center);
