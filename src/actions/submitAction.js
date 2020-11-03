@@ -31,7 +31,7 @@ export const inventory = {
     Kia: {
           'SWP-BASE': 1,ABP: 1,'7V': 1,U4: 1,IM: 1,IE: 1,HO: 1,DRB: 1
         },
-    Mazada: {
+    Mazda: {
              '189': 1,'27A': 1,'211': 1,'22V': 1,'28B': 1,'26X': 1,'28W': 1,'38H': 1,
              '34J': 2,'32V': 1,'35N': 1,'34R': 1,'38P': 1,'34K': 1,'32S': 1,'42A': 2,
              '42S': 2,'42M': 1,'46G': 1,'41W': 1,'JAG': 1
@@ -74,9 +74,6 @@ export const inventory = {
 const SEARCHSUBMIT = 'searchSubmit';
 const ADDSUBMIT    = 'addSubmit';
 const REMOVESUBMIT = 'removeSubmit';
-//const LOGSUBMIT    = 'logSubmit';
-//const SAVESUBMIT   = 'saveSubmit';
-//const BACKUPSUBMIT = 'backupSubmit';
 
 // Acquire form data
 const getAutoMakeRecord = (makeId,codeId)=>{

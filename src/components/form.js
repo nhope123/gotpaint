@@ -15,7 +15,7 @@ export const Selection = (props)=>{
         <option value='Hyundai'>Hyundai</option>
         <option value='Infiniti'>Infiniti</option>
         <option value='Kia'>Kia </option>
-        <option value='Mazada'>Mazda </option>
+        <option value='Mazda'>Mazda </option>
         <option value='Mercedes'>Mercedes</option>
         <option value='Mini'>MINI</option>
         <option value='Mitsubishi'>Mitsubishi</option>

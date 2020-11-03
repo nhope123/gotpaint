@@ -1,0 +1,93 @@
+@import './variables/_mixins.scss';
+
+.inventory{
+  @include dimension(100vw,80vh);
+  margin-top: 123px;
+  background-color: rgba(255,0,0,0.2);
+  overflow-y: auto;
+
+  .title{
+    @include dimension(100%);
+    @include fontStyle(20px,black, bold);
+    line-height: 1.9;
+    text-align: center;
+  }
+  .choice{
+    @include positionLayout(flex,relative);
+    @include flexPosition(row, center,center);
+    label{
+      @include positionLayout(inline-block,relative);
+      @include fontStyle(18px,black);
+
+      line-height: 2.4;
+    }
+    select{
+      @include dimension(178px);
+    }
+    span{
+      @include positionLayout(inline-block,relative);
+      @include fontStyle(16px,black);
+      line-height: 1.7;
+      text-align: center;
+    }
+    span:nth-of-type(2n+1){
+      @include dimension(190px);
+    }
+    span:nth-of-type(2n){
+      @include dimension(110px);
+    }
+  }
+
+  table{
+    @include positionLayout(flex,relative);
+    @include flexPosition(column,flex-start,center);
+    @include dimension(280px,445px);
+    background-color: white;
+
+    border: 1px solid black;
+    margin: 0px auto;
+    thead{
+      @include positionLayout(block,sticky);
+      @include dimension(100%);
+      border-bottom: 2px solid black;
+    }
+    tr{
+      @include positionLayout(block,sticky);
+      @include dimension(100%);
+      td{
+        @include dimension(140px);
+        text-align: center;
+        //border: 2px solid white;
+      }
+    }
+    tbody{
+      @include positionLayout(block,relative);
+      @include dimension(100%);
+      //border: 2px solid blue;
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      tr:nth-of-type(2n+1){
+        background-color: #f2f1ef;
+        //border: 2px solid green;
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: 451px) {
+  .inventory{
+    @include dimension(60vw,77%);
+    max-width: 410px;
+    min-width: 310px;
+    margin-top: 30px;
+
+    table{
+        @include dimension(280px,445px);
+        max-height: 500px;
+        min-height: 20%;
+    }
+
+  }
+}

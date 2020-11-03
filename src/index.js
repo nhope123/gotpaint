@@ -5,6 +5,7 @@ import store from './store/store.js';
 import './style/index.scss';
 import './style/nav.scss';
 import './style/form.scss';
+import './style/inventory.scss';
 //import App from './App';
 import Paint from './components/paintApp.js';
 import reportWebVitals from './reportWebVitals';
