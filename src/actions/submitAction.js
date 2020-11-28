@@ -1,4 +1,7 @@
 import store from './../store/store.js';
+
+const storage = require('electron-storage');
+
 export const inventory = {
     Acura: {},
     'BMW': {
@@ -13,16 +16,16 @@ export const inventory = {
             G2: 1,G3: 2,JV: 1,NZ: 1,UH: 2,U6: 1,UG: 1,VX: 1,VH: 2,VJ: 1,Y2: 1
           },
     'GMC': {
-            '122V': 1,'224L': 1,'534F': 1,'706S': 1,'817K': 2,'810T': 1,'9792': 1,
+            '122V': 1,'224L': 1,'534F': 1,'706S': 1,'816K': 1,'817K': 2,'810T': 1,'9792': 1,
             '994L': 1,'403P': 1,'WS5': 1,WA565Q: 1, WA139X: 1, WA232M: 1, WA9753: 1,
             WA502Q: 2,WA213M: 1,WA960: 1,WA505Q: 1,WA707S: 1,WA503Q: 1,YR600M: 1
           },
     Honda: {
             B561P: 1, B527P: 2,B537M: 2, B588P: 1, B92P: 1,G508P: 1, G51P: 1,
-            NH624P: 3, NH788P: 3, NH797M: 3, NH578: 1, NH658P: 5,NH739M: 1,
-            NH707: 1, NH623M: 1, NH731P: 1,NH741: 1,NH737M: 2,NH883P: 1,NH782M: 1,
-            NH675M : 1, NH603P: 1,NH677P: 1,'NAH-BASE': 1, R525P: 2,R530P : 1, R543P: 1,
-            RP32P: 1, R81: 1, YR562P: 1, YR573M: 1, YR574M: 1, YR578M: 1
+            NH624P: 3, NH788P: 3,NH658P: 5,NH739M: 1,NH707: 1, NH623M: 1,
+            NH731P: 1,NH741: 1,NH737M: 2,NH782M: 1,NH675M : 1, NH603P: 1,NH677P: 1,
+            'NAH-BASE': 1, R525P: 2,R530P : 1, R543P: 1,RP32P: 1, R81: 1, YR562P: 1,
+            YR573M: 1, YR574M: 1, YR578M: 1
           },
     Hyundai: {
               P3: 2,WJ: 1,DO: 1,TR3: 2,NGA: 1,'2X': 1,T3: 1,EB: 1,P9R: 1,NAA: 1,TG4: 1,SWP: 1,BV: 1
@@ -46,7 +49,7 @@ export const inventory = {
                   X42: 1
                 },
     Nissan: {
-              C12: 1,G41: 3,L5D: 1,LAE: 1,K23: 1,K26: 1,KAD: 2,KY2: 1,KX6: 1,K36: 1,
+              C12: 1,G41: 3,L5D: 1,LAE: 1,K23: 1,K26: 1,KAD: 3,KY2: 1,KX6: 1,K36: 1,
               NAH: 1,QX3: 2,RAB: 1,W40: 1
             },
     Porsche: {
@@ -68,6 +71,13 @@ export const inventory = {
     Volvo: {}
 };
 
+const saveState = ()=>{
+  const data = store.getState().submit;
+  const see = localStorage.setItem('paint.json', JSON.stringify(data));
+  console.log(see);
+  /*console.log('saving data........');
+  console.log(JSON.stringify(data));*/
+}
 
 
 // Submit Actions
@@ -80,6 +90,10 @@ const getAutoMakeRecord = (makeId,codeId)=>{
   var autoMake = document.getElementById(makeId).value;
   var autoCode = document.getElementById(codeId).value;
   document.getElementById(codeId).value = '';
+
+  saveState();
+
+
  return [ autoMake, autoCode.toUpperCase()];
 }
 
