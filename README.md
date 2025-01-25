@@ -49,7 +49,7 @@ Follow these steps to set up and run the project locally.
    http://localhost:3000
 
 ### Screenshots 📸
-[screenshot]()
+[screenshot](./public/screenshot.png)
 
 ### Usage 🖱️
 1. Add Paint: Click the "Add Paint" button and fill out the form with paint details (e.g., color code, name, type).
@@ -58,4 +58,4 @@ Follow these steps to set up and run the project locally.
 4. View Inventory: Browse the full list of paints displayed on the main page.
    
 ### License 📜
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
