@@ -49,7 +49,9 @@ Follow these steps to set up and run the project locally.
    http://localhost:3000
 
 ### Screenshots 📸
-[screenshot](./public/screenshot.png)
+<div align='center' >
+  <img src='./public/screenshot.png' alt='Desktop screenshot' height='300' />
+</div>
 
 ### Usage 🖱️
 1. Add Paint: Click the "Add Paint" button and fill out the form with paint details (e.g., color code, name, type).
